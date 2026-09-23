@@ -1,1 +1,99 @@
-/* add styles here */
+@font-face {
+  font-family: Avenir;
+  src: url('./fonts/Avenir-Book.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url('./fonts/Avenir-Heavy.ttf');
+  font-weight: 900;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Avenir, sans-serif;
+  font-weight: 300;
+}
+
+.search {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.search + .search {
+  margin-top: 20px;
+}
+
+.search__input {
+  width: 100%;
+  border: 1px solid #e1e7ed;
+  border-radius: 4px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  color: #3d4e61;
+  font-family: Avenir, sans-serif;
+  font-weight: 400;
+  outline: none;
+}
+
+[data-qa='big'] .search__input {
+  height: 70px;
+  padding: 0 26px 0 62px;
+  background-image: url('./images/Search.svg');
+  background-position: 26px center;
+  background-size: 19px 19px;
+  border-color: #687c94;
+  font-size: 16px;
+}
+
+[data-qa='small'] .search__input {
+  height: 42px;
+  padding: 0 13px 0 33px;
+  background-image: url('./images/Search.svg');
+  background-position: 13px center;
+  background-size: 11px 11px;
+  font-size: 16px;
+}
+
+[data-qa='small'] .search__input:hover {
+  font-size: 14px;
+}
+
+[data-qa='small'] .search__input:focus {
+  border-radius: 3px;
+  background-image: url('./images/Search.svg'),
+    linear-gradient(180deg, #fff 0%, #f6f6f7 100%);
+  background-position:
+    13px center,
+    center;
+  background-size:
+    11px 11px,
+    100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+[data-qa='big'] .search__input:hover {
+  box-shadow: 0 4px 4px 0 #00000040;
+}
+
+[data-qa='big'] .search__input:focus {
+  border-color: #e1e7ed;
+  border-radius: 3px;
+  background-image: url('./images/Search.svg'),
+    linear-gradient(180deg, #fff 0%, #f6f6f7 100%);
+  background-position:
+    26px center,
+    center;
+  background-size:
+    19px 19px,
+    100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  box-shadow: 0 4px 4px 0 #00000040;
+}
