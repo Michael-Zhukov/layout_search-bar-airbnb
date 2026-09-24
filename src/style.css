@@ -41,6 +41,10 @@ input {
   outline: none;
 }
 
+[data-qa='big'] {
+  margin-top: 20px;
+}
+
 [data-qa='big'] .search__input {
   height: 70px;
   padding: 0 0 0 62px;
